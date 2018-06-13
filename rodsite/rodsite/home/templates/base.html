@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<link rel="shortcut icon" href="img/favicon.png">
+  	<title>{% block title %}{% endblock %} Rise Of Doom </title>
+
+  	<link href="{% static "/bootstrap/css/bootstrap.css" %}" rel="stylesheet">
+    <link href="{% static "/bootstrap/css/bootstrap-grid.css" %}" rel="stylesheet">
+    <link href="{% static "/bootstrap/css/bootstrap-reboot.css" %}" rel="stylesheet">
+    <link href="{% static "/font-awesome/css/font-awesome.css" %}" rel="stylesheet">
+  	<link href="{% static "/custom/custom.css" %}" rel="stylesheet">
+    <link href="{% static "/custom/rod-theme.css" %}" rel="stylesheet">
+    <script src="{% static "/jquery/jquery.js" %}"></script>
+    <script src="https://e-cdns-files.dzcdn.net/js/min/dz.js"></script>
+  </head>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+    <body id="page-top">
+          <div class="logo-rod" style="height: 100px;">
+            <img class="img-fluid" src="/static/ressources/ROD-logowhite.png" />
+          </div>
+          <!-- Navigation -->
+          {% include "includes/navbar.html" %}
+      {% block content %}
+  		{% endblock %}
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+    <footer>
+      <div class="container text-center">
+        <hr>
+        <p>Copyright &copy; Your Website 2018</p>
+          <div id="fb-root"></div>
+      </div>
+    </footer>
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////// -->
+    <script src="{% static "/jquery/scrollspy.js" %}"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script src="{% static "/bootstrap/js/bootstrap.js" %}"></script>
+    <script src="{% static "/bootstrap/js/bootstrap.bundle.js" %}"></script>
+
+    <script src="{% static "/jquery-easing/jquery.easing.js" %}"></script>
+    <script src="{% static "/jquery-easing/jquery.easing.compatibility.js" %}"></script>
+    <script src="{% static "/jquery/jquery.slim.js" %}"></script>
+
+    <script src="{% static "/custom/custom.js" %}"></script>
+    <script type='text/javascript' src='loadImg.js'></script>
+    <script>
+       (function(d, s, id) 
+        {
+          var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.12';
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+    </script>
+  </body>
+</html>

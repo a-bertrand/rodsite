@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+  <header class="masthead">
+    <div class="intro-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section id="bio" class="biography_line">
+    {% include "includes/biography.html" %}
+  </section>
+
+  <section id="social" class="text-center rod_line2">
+    {% include "includes/social.html" %}
+  </section>
+
+  <section id="partner" class="text-center partner-line">
+    {% include "includes/partner.html" %}
+  </section>
+
+  <section id="contact" class="text-center contact-line">
+    {% include "includes/contact.html" %}
+  </section>
+<script>
+  function goFR()
+    {
+      $('.content-FR').show()
+      $('.content-ENG').hide()
+    }
+    function goENG()
+    {
+      $('.content-ENG').show()
+      $('.content-FR').hide()
+    }
+  $('document').ready(function()
+  {
+    if (window.navigator.language == 'fr')
+    {
+      goFR()
+    }
+    else
+    {
+      goENG()
+    }
+  })
+</script>
+
+{% endblock %}
